@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),
     path('catalog/', include('goods.urls', namespace='catalog')),
-        path('__debug__/', include('debug_toolbar.urls', namespace='djdt')),
+    
+    path('__debug__/', include('debug_toolbar.urls', namespace='djdt')),
 ]
 
 if settings.DEBUG:
