@@ -15,11 +15,11 @@ def catalog(request):
     return render(request, 'goods/catalog.html', context)
 
 
-def product(request, product_id):
+def product(request, product_slug):
 
-    product = Products.objects.get(id=product_id)
+    product = Products.objects.get(slug=product_slug)
     
-    product_item = get_object_or_404(Products, id=product_id)
+
     
     context = {
         'product': product,
